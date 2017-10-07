@@ -1,5 +1,5 @@
 Given("the input {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  @input = string
 end
 
 When("the calculator is run") do
