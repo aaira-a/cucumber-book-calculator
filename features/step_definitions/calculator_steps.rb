@@ -1,5 +1,5 @@
-Given("the input {string}") do |string|
-  @input = string
+Given(/^the input "([^"]*)"$/) do |input|
+  @input = input
 end
 
 When("the calculator is run") do
@@ -7,6 +7,6 @@ When("the calculator is run") do
   raise('Command failed!') unless $?.success?
 end
 
-Then("the output should be {string}") do |expected_output|
+Then(/^the output should be "([^"]*)"$/) do |expected_output|
   expect(@output).to eq expected_output
 end
